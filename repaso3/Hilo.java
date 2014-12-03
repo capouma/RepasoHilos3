@@ -12,21 +12,19 @@ package repaso3;
 public class Hilo extends Thread
 {
     // Definimos una variable de tipo int que sera nuestro contador, un string que recogera nuestra frase y un char que recogera la vocal a leer.
-    int contador;
+    Contador contador;
     String frase;
     char vocal;
-    public Hilo(char nombre, String frase)
+    public Hilo(char nombre, Contador contador)
     {
         this.vocal = nombre;
-        this.frase = frase;
+        this.contador = contador;
     }
     
     @Override
     public void run()
     {
-        
-        // Mostramos por pantalla el total de letras para cada hilo.
-        System.out.println("Tenemos " + contador + " vocales " + vocal);
+        System.out.println("El numero de vocales " + vocal + " es de " + contador.cuentaVocales(vocal));
     }
     
 }
