@@ -25,19 +25,6 @@ public class Hilo extends Thread
     public void run()
     {
         
-        // Realizamos un bucle for para recorrer toda la frase
-        for(int i = 0; i < frase.length(); i++)
-        {
-            synchronized(frase)
-            {
-                if(vocal == frase.charAt(i))
-                {
-                    contador = contador + 1;
-                }
-            }
-
-        }
-        
         // Mostramos por pantalla el total de letras para cada hilo.
         System.out.println("Tenemos " + contador + " vocales " + vocal);
     }
