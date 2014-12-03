@@ -18,14 +18,14 @@ public class Repaso3 {
     public static void main(String[] args)
     {
         // Definimos una variable de tipo String que tendra nuestra frase a analizar.
-        String frase = "En un lugar de la mancha que todos conocemos aqui";
+        String frase = "en un lugar de la mancha que todos conocemos aqui";
         
         // Creamos los 5 hilos que usaremos para contar las vocales de nuestra texto/archivo.
-        Hilo hilo1 = new Hilo("Hilo 1 es A", frase);
-        Hilo hilo2 = new Hilo("Hilo 2 es E", frase);
-        Hilo hilo3 = new Hilo("Hilo 3 es I", frase);
-        Hilo hilo4 = new Hilo("Hilo 4 es O", frase);
-        Hilo hilo5 = new Hilo("Hilo 5 es U", frase);
+        Hilo hilo1 = new Hilo('a', frase);
+        Hilo hilo2 = new Hilo('e', frase);
+        Hilo hilo3 = new Hilo('i', frase);
+        Hilo hilo4 = new Hilo('o', frase);
+        Hilo hilo5 = new Hilo('u', frase);
         
         // Lanzamos nuestros hilos.
         hilo1.start();
